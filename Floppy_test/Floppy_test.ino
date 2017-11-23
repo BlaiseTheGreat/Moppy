@@ -11,7 +11,11 @@ digitalWrite(drivePin, LOW);
 }
 
 void loop() {
+
   //I dont want to fight you
+
+  // I'll fight you
+
   digitalWrite(stepPin, HIGH);
   delay(d);
   digitalWrite(stepPin, LOW);
