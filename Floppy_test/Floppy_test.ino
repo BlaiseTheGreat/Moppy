@@ -3,10 +3,9 @@
 #define STEP_PIN 3
 #define DRIVE_PIN 2
 
-
 //////////////////////////////////Variables////////////////////////////////////////////
 int stepLocation = 0;// 0 is the back of the floppy, 79 is the front, 159 is back to the back
-double frequency[10] = {45,55,60,65,70,75,80,85,90,95};
+double frequency[10] = {45,55,60,65,70,80,90,100,120,150};
 double duration[10]= {1000,1000,1000,1000,1000,1000,1000,1000,1000,1000};
 //////////////////////////////////Main setup////////////////////////////////////////////
 void setup() {
@@ -15,6 +14,8 @@ pinMode(DRIVE_PIN, OUTPUT);
 digitalWrite(STEP_PIN, LOW);
 digitalWrite(DRIVE_PIN, LOW);
 resetMoppy();
+//Serial.begin(9600);
+//Serial.print(("Hello World"));
 }
 /////////////////////////////////Main Loop/////////////////////////////////////////////
 void loop() {
@@ -52,6 +53,7 @@ void playNote(double frequency, double duration){
      }
   stepLocation = 0;
 }
+
 
 
 
